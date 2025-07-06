@@ -1,6 +1,7 @@
 services:
   api:
     build: . # Constroi a imagem a partir do Docker file na raiz do projeto
+    container_name: api # Nome do Container
     ports:
       - "8000:8000"
     volumes:
