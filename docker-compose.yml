@@ -1,0 +1,10 @@
+services:
+  api:
+    build: . # Constroi a imagem a partir do Docker file na raiz do projeto
+    ports:
+      - "8000:8000"
+    volumes:
+      # Monta o diretório local no contêiner para:
+      # 1. Permitir o live-reloading do código.
+      # 2. Persistir o arquivo do banco de dados SQLite (escola.db) no host.
+      - .:/app
